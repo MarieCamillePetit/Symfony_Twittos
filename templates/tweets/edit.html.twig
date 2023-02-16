@@ -5,9 +5,9 @@
 {% block body %}
     <h1>Modification du twitto</h1>
 
-    <div class="card_twit">
+    {# <div class="card_twit"> #}
     {{ include('tweets/_form.html.twig', {'button_label': 'Update'}, { 'attr': {'class': 'test'}} ) }}
-    </div>
+    {# </div> #}
     
 
     <a href="{{ path('app_tweets_index') }}">back to list</a>

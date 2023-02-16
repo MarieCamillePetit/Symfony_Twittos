@@ -16,16 +16,12 @@
                 <td>{{ tweet.contenu }}</td>
             </tr>
             <tr>
-                <th>Id_user</th>
-                <td>{{ tweet.idUser }}</td>
+                <th>Username</th>
+                <td>{{ tweet.userId.username}}</td>
             </tr>
             <tr>
                 <th>Image</th>
                 <td><img src="{{ vich_uploader_asset(tweet, 'imageFile') }}" alt="Image de la pierre" style="width:400px; height:300px;"></td>
-            </tr>
-            <tr>
-                <th>Nom image</th>
-                <td>{{ tweet.imageName }}</td>
             </tr>
         </tbody>
     </table>

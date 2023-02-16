@@ -4,9 +4,8 @@ namespace App\Entity;
 
 use App\Repository\TweetsRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Vich\UploaderBundle\Mapping\Annotation as Vich; 
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
-
 
 #[ORM\Entity(repositoryClass: TweetsRepository::class)]
 #[Vich\Uploadable]
@@ -20,12 +19,9 @@ class Tweets
     #[ORM\Column(length: 255)]
     private ?string $contenu = null;
 
-    #[ORM\Column]
-    #[ORM\ManyToOne(targetEntity: User::class)]
-    private ?int $id_user = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $media = null;
+    #[ORM\ManyToOne(inversedBy: 'tweets')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user_id = null;
 
     #[Vich\UploadableField(mapping: 'tweets', fileNameProperty: 'imageName')]
     private ?File $imageFile = null;
@@ -53,39 +49,26 @@ class Tweets
         return $this;
     }
 
-    public function getIdUser(): ?int
+    public function getUserId(): ?User
     {
-        return $this->id_user;
+        return $this->user_id;
     }
 
-    public function setIdUser(int $id_user): self
+    public function setUserId(?User $user_id): self
     {
-        $this->id_user = $id_user;
+        $this->user_id = $user_id;
 
         return $this;
     }
-
-    public function getMedia(): ?string
-    {
-        return $this->media;
-    }
-
-    public function setMedia(?string $media): self
-    {
-        $this->media = $media;
-
-        return $this;
-    }
-
     /**
      * Get the value of imageFile
-     */ 
+     */
     public function getImageFile()
     {
         return $this->imageFile;
     }
 
-     /**
+    /**
      * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
      * of 'UploadedFile' is injected into this setter to trigger the update. If this
      * bundle's configuration parameter 'inject_on_load' is set to 'true' this setter
@@ -107,7 +90,7 @@ class Tweets
 
     /**
      * Get the value of imageName
-     */ 
+     */
     public function getImageName()
     {
         return $this->imageName;
@@ -117,7 +100,7 @@ class Tweets
      * Set the value of imageName
      *
      * @return  self
-     */ 
+     */
     public function setImageName($imageName)
     {
         $this->imageName = $imageName;
@@ -127,7 +110,7 @@ class Tweets
 
     /**
      * Get the value of updatedAt
-     */ 
+     */
     public function getUpdatedAt()
     {
         return $this->updatedAt;
@@ -137,7 +120,7 @@ class Tweets
      * Set the value of updatedAt
      *
      * @return  self
-     */ 
+     */
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;

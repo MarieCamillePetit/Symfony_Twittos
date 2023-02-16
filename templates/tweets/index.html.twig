@@ -7,12 +7,11 @@
     </div>
     
         {% for tweet in tweets %}
-
             <div class="card_twit">
                 <div class="card_twit_user">
-                    <img src="..\assets\img\bird.jpg" alt="" class="user_img">
-                    <h3 class="card_twiter_username">{{ tweet.idUser }}</h3>
-                    {% if app.user %}
+                    <img src="..\assets\img\{{ random(['bird.jpg', 'love-birds.png', 'smartphone.png']) }}" alt="" class="user_img">
+                    <h3 class="card_twiter_username">{{ tweet.userId.username}}</h3>
+                    {% if (app.user) and (app.user.username == tweet.userId.username) %}
                     <div class="btn_twit">
                         <a href="{{ path('app_tweets_edit', {'id': tweet.id}) }}" >
                         <img src="..\assets\img\edit.png" alt="Modification logo" class="action_btn"></a>
@@ -21,9 +20,12 @@
                 </div>
                 <div class="card_twit_contenu">
                     <h2>{{ tweet.contenu }}</h2>
+                
+                {% if tweet.imageName %}
                 <div class="card_twit_img">
                     <img src="{{ vich_uploader_asset(tweet, 'imageFile') }}" alt="Image du message" style="width:400px; height:300px;">
                 </div>
+                {% endif %}
                 </div>
 
             

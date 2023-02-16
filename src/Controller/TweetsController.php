@@ -25,6 +25,7 @@ class TweetsController extends AbstractController
     public function new(Request $request, TweetsRepository $tweetsRepository): Response
     {
         $tweet = new Tweets();
+        $tweet->setUserId($this->getUser());
         $form = $this->createForm(TweetsType::class, $tweet);
         $form->handleRequest($request);
 
@@ -69,7 +70,7 @@ class TweetsController extends AbstractController
     #[Route('/{id}', name: 'app_tweets_delete', methods: ['POST'])]
     public function delete(Request $request, Tweets $tweet, TweetsRepository $tweetsRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$tweet->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $tweet->getId(), $request->request->get('_token'))) {
             $tweetsRepository->remove($tweet, true);
         }
 
