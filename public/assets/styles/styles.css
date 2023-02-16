@@ -1,0 +1,160 @@
+body{
+    background-color: #15202b;
+    color: #ffffff;
+    max-width: 1200px;
+        margin: 0 auto;
+}
+         
+.btn {
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #15202b;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+.btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+ 
+
+.icone{
+    height: 30px;
+    width: 30px;
+}
+
+li{
+    padding-left: 50px;
+    display: flex;
+}
+
+a{
+    color: #ffffff;
+}
+
+.icon_login{
+    width: 50px;
+    height: 50px;
+}
+
+
+.card_twit{
+    margin: 50px;
+    border-radius: 20px;
+    background-color: #1f2937;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 50px auto;
+    
+}
+
+.card_twit_user{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.card_twiter_username{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.user_img{
+    height: 80px;
+    width: 80px;
+    border-radius: 9999px;
+}
+
+.card_twit_contenu{
+    padding: 2rem 0;
+}
+
+.card_twit_img{
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #15202b;
+}
+
+.action_btn{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: end;
+    margin: 0 auto;
+}
+
+.btn_twit{
+    position: absolute;
+    right: 0;
+}
+
+
+/* STYLE HOME PAGE */
+
+.home_container{
+    display: flex;
+    padding: 2rem; 
+    align-items: center;   
+}
+
+.btn_home_div{
+    display: flex;
+    justify-content: center;
+    
+}
+
+@media (max-width: 1000px) { 
+    .display_none{
+        display: none;
+    }
+
+    body{
+        padding: 2rem;
+    }
+ }
+
+.btn{
+    box-shadow: 0px 10px 14px -7px #ffffff;
+	background:linear-gradient(to bottom, #1f2937 5%, #15202b 100%);
+	background-color:#1f2937;
+	border-radius:8px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+    border: 1px solid #ffff;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn:hover{
+    background:linear-gradient(to bottom, #15202b 5%, #1f2937 100%);
+	background-color:#15202b;
+    text-decoration:none;
+    color: #ffffff;
+}
+
+
+.test{
+    background-color: red;
+}

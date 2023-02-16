@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}Twittosphère{% endblock %}
+
+
+{% block body %}
+    <body>
+        <div class="home_container">
+            <div class="home_left">
+                <h4>Réseaux sociaux</h4>
+                <h1>Bienvenue sur la Twittosphère</h1>
+                <p>La Twittosphère est un réseau social de microblogage géré par l'entreprise Twittosphère Inc. </p>
+            </div>
+                <img src="{{ asset('assets/img/back_index.png') }}" alt="" class="display_none">
+        </div>
+        <div class="btn_home_div">
+            <a href="{{ path('app_tweets_index') }}" class="btn"> Voir les Twittos</a>
+        </div>
+    </body>
+{% endblock %}
+

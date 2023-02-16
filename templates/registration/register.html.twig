@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+                    {{ form_start(registrationForm) }}
+                    <div class="mb-md-5 mt-md-4">
+                            <img src="{{ asset('assets/img/love-birds.png') }}" class="icon_login">
+                    <h2 class="fw-bold mb-2 text-uppercase">S'inscrire</h2>
+
+                    <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="typeEmailX">Nom d'utilisateur</label>
+                        {{ form_row(registrationForm.Username) }}
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="typePasswordX">Mot de passe</label>
+                        {{ form_row(registrationForm.plainPassword, { label: 'Password'}) }}
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                        {{ form_row(registrationForm.agreeTerms) }}
+                    </div>
+                    
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Connexion</button>
+                    {{ form_end(registrationForm) }}
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification twitto{% endblock %}
+
+{% block body %}
+    <h1>Modification du twitto</h1>
+
+    <div class="card_twit">
+    {{ include('tweets/_form.html.twig', {'button_label': 'Update'}, { 'attr': {'class': 'test'}} ) }}
+    </div>
+    
+
+    <a href="{{ path('app_tweets_index') }}">back to list</a>
+
+    {{ include('tweets/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,24 @@
+{{ form_start(form) }}
+    {# {{ form_widget(form) }} #}
+<div class="card_twit">
+    <div class="card_twit_user">
+                    <img src="..\..\assets\img\bird.jpg" alt="" class="user_img">
+                    <h3 class="card_twiter_username">{{ tweet.idUser }}</h3>
+                    {% if app.user %}
+                    <div class="btn_twit">
+                        <a href="{{ path('app_tweets_edit', {'id': tweet.id}) }}" >
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="card_twit_contenu">
+                    {{ form_widget(form.contenu) }}
+                <div class="card_twit_img">
+                    {{ form_widget(form.imageFile) }}
+                </div>
+                </div>
+
+<button class="btn">{{ button_label|default('Save') }}</button>            
+</div>
+
+
+{{ form_end(form) }}

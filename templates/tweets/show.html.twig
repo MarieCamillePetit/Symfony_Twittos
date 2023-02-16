@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tweets{% endblock %}
+
+{% block body %}
+    <h1>Tweets</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ tweet.id }}</td>
+            </tr>
+            <tr>
+                <th>Contenu</th>
+                <td>{{ tweet.contenu }}</td>
+            </tr>
+            <tr>
+                <th>Id_user</th>
+                <td>{{ tweet.idUser }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ vich_uploader_asset(tweet, 'imageFile') }}" alt="Image de la pierre" style="width:400px; height:300px;"></td>
+            </tr>
+            <tr>
+                <th>Nom image</th>
+                <td>{{ tweet.imageName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_tweets_index') }}">back to list</a>
+
+    <a href="{{ path('app_tweets_edit', {'id': tweet.id}) }}">edit</a>
+
+    {{ include('tweets/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les twittos!{% endblock %}
+{% block body %}
+    <div>
+        <a href="{{ path('app_tweets_new') }}" class="btn">Créer un twitto</a>
+    </div>
+    
+        {% for tweet in tweets %}
+
+            <div class="card_twit">
+                <div class="card_twit_user">
+                    <img src="..\assets\img\bird.jpg" alt="" class="user_img">
+                    <h3 class="card_twiter_username">{{ tweet.idUser }}</h3>
+                    {% if app.user %}
+                    <div class="btn_twit">
+                        <a href="{{ path('app_tweets_edit', {'id': tweet.id}) }}" >
+                        <img src="..\assets\img\edit.png" alt="Modification logo" class="action_btn"></a>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="card_twit_contenu">
+                    <h2>{{ tweet.contenu }}</h2>
+                <div class="card_twit_img">
+                    <img src="{{ vich_uploader_asset(tweet, 'imageFile') }}" alt="Image du message" style="width:400px; height:300px;">
+                </div>
+                </div>
+
+            
+            </div>
+        {% else %}
+            <tr>
+                <td colspan="5">Aucun twitt existant</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+
+
+{% endblock %}
