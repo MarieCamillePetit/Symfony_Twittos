@@ -83,5 +83,5 @@ symfony server:start
 
 ## Authors
 
-* **Telath** - *LP DIM STUDENT* - [Telath](https://github.com/Telath) - **
-* **MarieCamillePetit** - *LP DIM STUDENT* - [MarieCamillePetit](https://github.com/MarieCamillePetit) - **
+* **Telath** - *LP DIM STUDENT* - [Telath](https://github.com/Telath) 
+* **MarieCamillePetit** - *LP DIM STUDENT* - [MarieCamillePetit](https://github.com/MarieCamillePetit)
