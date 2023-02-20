@@ -72,7 +72,7 @@ yarn build
 ```
 4. Base de donnée :
 
-Vous devez créer une base de donnée en local avec le nom : u546677444_projetsymfony
+Vous devez créer une base de donnée en local avec le nom : ' u546677444_projetsymfony '
 Ensuite exécuter : 
 ```sh
 symfony console make:migration
