@@ -70,8 +70,16 @@ cd Symfony_Twittos/
 composer install
 yarn build
 ```
+4. Base de donnée :
 
-4. Lancer le projet : 
+Vous devez créer une base de donnée en local avec le nom : u546677444_projetsymfony
+Ensuite exécuter : 
+```sh
+symfony console make:migration
+php bin/console doctrine:migrations:migrate
+```
+
+5. Lancer le projet : 
 
 ```sh
 symfony server:start
