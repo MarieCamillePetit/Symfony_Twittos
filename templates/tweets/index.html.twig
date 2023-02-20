@@ -2,14 +2,16 @@
 
 {% block title %}Les twittos!{% endblock %}
 {% block body %}
+{% if (app.user) %}
     <div>
         <a href="{{ path('app_tweets_new') }}" class="btn">Créer un twitto</a>
     </div>
+{% endif %}
     
         {% for tweet in tweets %}
             <div class="card_twit">
                 <div class="card_twit_user">
-                    <img src="..\assets\img\{{ random(['bird.jpg', 'love-birds.png', 'smartphone.png']) }}" alt="" class="user_img">
+                    <img src="..\assets\img\{{ random(['1.svg','2.svg','3.svg','4.svg','5.svg','6.svg','7.svg','8.svg','9.svg', ]) }}" alt="" class="user_img">
                     <h3 class="card_twiter_username">{{ tweet.userId.username}}</h3>
                     {% if (app.user) and (app.user.username == tweet.userId.username) %}
                     <div class="btn_twit">
