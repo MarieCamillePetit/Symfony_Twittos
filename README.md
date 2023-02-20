@@ -22,7 +22,7 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![Screen Shot](public/images/readmepic.png)
 
 Avec cette application, vous pouvez créer un compte et poster des Twittos pour le partagez à la communauté ! 
 
@@ -68,6 +68,7 @@ cd Symfony_Twittos/
 
 ```sh
 composer install
+yarn build
 ```
 
 4. Lancer le projet : 
@@ -75,10 +76,6 @@ composer install
 ```sh
 symfony server:start
 ```
-
-
-### Creating A Pull Request
-
 
 
 ## Authors
