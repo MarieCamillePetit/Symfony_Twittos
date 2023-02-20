@@ -186,3 +186,26 @@ a {
 .quote_container span.anime {
   font-weight: 600;
 }
+
+.quatrecentquatre {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  color: #15202b;
+}
+
+.ohnon {
+}
+
+.linkerror {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.linkerror a {
+  color: #15202b;
+  text-decoration: none;
+  border: 1px solid #15202b;
+  padding: 10px;
+  border-radius: 10px;
+}
