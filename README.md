@@ -21,8 +21,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-
-![Screen Shot](public/images/readmepic.png)
+[![Alt text]](https://www.youtube.com/watch?v=UkVaZvJsIbE)
 
 Avec cette application, vous pouvez créer un compte et poster des Twittos pour le partagez à la communauté ! 
 
