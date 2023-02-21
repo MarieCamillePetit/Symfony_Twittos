@@ -73,6 +73,7 @@ yarn
 yarn build
 ```
 4. Base de donnée :
+N'oubliez pas de modifier le ".env" pour l'adapter à votre base de donnée.
 
 Vous devez créer une base de donnée en local avec le nom : ' u546677444_projetsymfony '
 Ensuite exécuter : 
@@ -90,5 +91,5 @@ symfony server:start
 
 ## Authors
 
-* **Telath** - *LP DIM STUDENT* - [Telath](https://github.com/Telath) 
-* **MarieCamillePetit** - *LP DIM STUDENT* - [MarieCamillePetit](https://github.com/MarieCamillePetit)
+* **Clément Pouillart** - *LP DIM STUDENT* - [Telath](https://github.com/Telath) 
+* **Marie-Camille Petit** - *LP DIM STUDENT* - [MarieCamillePetit](https://github.com/MarieCamillePetit)
