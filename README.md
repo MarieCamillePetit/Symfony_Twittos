@@ -75,6 +75,11 @@ yarn build
 4. Base de donnée :
 N'oubliez pas de modifier le ".env" pour l'adapter à votre base de donnée.
 
+```sh
+# DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+DATABASE_URL="mysql://User:Password@127.0.0.1:3306/u546677444_projetsymfony?serverVersion=5.7"
+```
+
 Vous devez créer une base de donnée en local avec le nom : ' u546677444_projetsymfony '
 Ensuite exécuter : 
 ```sh
