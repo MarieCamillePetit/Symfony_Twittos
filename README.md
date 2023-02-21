@@ -68,6 +68,7 @@ cd Symfony_Twittos/
 
 ```sh
 composer install
+yarn
 yarn build
 ```
 4. Base de donnée :
