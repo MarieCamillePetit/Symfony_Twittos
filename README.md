@@ -21,7 +21,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-[![Alt text]](https://www.youtube.com/watch?v=UkVaZvJsIbE)
+<embed type="video/quicktime" src="https://www.youtube.com/watch?v=UkVaZvJsIbE" width="640" height="480" title="Vidéo Twittosphère">
 
 Avec cette application, vous pouvez créer un compte et poster des Twittos pour le partagez à la communauté ! 
 
